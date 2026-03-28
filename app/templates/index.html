@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Change Impact Mapper</h1>
+<p>Submit a change request to map blast radius and required checks.</p>
+
+<h2>Sample Changes</h2>
+<ul>
+  {% for s in samples %}
+  <li><a href="/api/impact/sample/{{ s }}">Run {{ s }}</a></li>
+  {% endfor %}
+</ul>
+
+<h2>Custom Change</h2>
+<form method="post" action="/run">
+  <input name="change_id" placeholder="change id" required />
+  <input name="target_node" placeholder="target node" required />
+  <input name="change_type" placeholder="change type" required />
+  <input name="rollout_window" placeholder="rollout window" required />
+  <input name="risk_level" placeholder="risk level" required />
+  <input name="notes" placeholder="notes" />
+  <button type="submit">Run Impact</button>
+</form>
+
+{% if result %}
+<section>
+  <h2>Report {{ result.report_id }}</h2>
+  <p>{{ result.report_memo }}</p>
+  <p><a href="/graph/{{ result.report_id }}">View graph data</a></p>
+</section>
+{% endif %}
+{% endblock %}

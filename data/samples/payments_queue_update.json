@@ -1,0 +1,8 @@
+{
+  "change_id": "CHG-9002",
+  "target_node": "payments-queue",
+  "change_type": "dependency update",
+  "rollout_window": "2026-04-04T03:00:00Z",
+  "risk_level": "medium",
+  "notes": "Queue broker version update"
+}

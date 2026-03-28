@@ -1,0 +1,4 @@
+body { font-family: Arial, sans-serif; margin: 1rem auto; max-width: 960px; }
+header { margin-bottom: 1rem; }
+input { display: block; margin: .4rem 0; padding: .4rem; width: 100%; }
+button { padding: .45rem .8rem; }

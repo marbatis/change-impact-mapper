@@ -1,0 +1,8 @@
+{
+  "change_id": "CHG-9001",
+  "target_node": "auth-service",
+  "change_type": "schema change",
+  "rollout_window": "2026-04-03T02:00:00Z",
+  "risk_level": "high",
+  "notes": "Token claim shape update for downstream auth consumers"
+}

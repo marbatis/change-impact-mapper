@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>History</h1>
+<ul>
+  {% for row in rows %}
+  <li>{{ row.change_id }} -> {{ row.target_node }} (<a href="/graph/{{ row.report_id }}">{{ row.report_id }}</a>)</li>
+  {% endfor %}
+</ul>
+{% endblock %}

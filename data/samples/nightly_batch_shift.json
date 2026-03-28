@@ -1,0 +1,8 @@
+{
+  "change_id": "CHG-9003",
+  "target_node": "nightly-batch",
+  "change_type": "timing shift",
+  "rollout_window": "2026-04-05T01:00:00Z",
+  "risk_level": "medium",
+  "notes": "Batch start moved by +90 minutes"
+}

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Graph View</h1>
+<p>{{ report.report_memo }}</p>
+<h2>Impacted Nodes</h2>
+<ul>{% for node in report.impacted_nodes %}<li>{{ node }}</li>{% endfor %}</ul>
+<h2>Critical Paths</h2>
+<ul>{% for path in report.critical_paths %}<li>{{ path }}</li>{% endfor %}</ul>
+{% endblock %}
